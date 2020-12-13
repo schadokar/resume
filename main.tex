@@ -1,0 +1,220 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=0.65in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{mdwlist}
+\usepackage{fontawesome}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\Huge \textbf{Shubham Kumar Chadokar}} 
+
+\textbf{\large\ \textbf{Solution Advisor}} \\
+
+
++91--8649904058 \ \ \textbullet
+\ \ shubhamchadokar04@gmail.com
+\\
+
+ {{\href{https://github.com/schadokar}{{github.com/schadokar}}}} \ \ \textbullet 
+\ \ {{\href {https://www.linkedin.com/in/schadokar/}{{linkedin.com/in/schadokar}}}} \ \ \textbullet
+\ \ {{\href {https://schadokar.dev}{{schadokar.dev}}}} \ \ \
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Summary}
+
+Software Engineer with good hands-on experience on backend development such as Golang, Nodejs and blockchain technologies such as Ethereum and Hyperledger Fabric. 
+
+\vspace{0.4em}
+
+             
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Strong:]
+	Golang, Nodejs, Ethereum, Hyperledger Fabric, JavaScript, Reactjs, Docker
+	\item[Knowledgeable:]
+	Azure, AWS, GCP, Mocha, Git, SQL, Kubernetes, Redis, RESTAPI, gRPC\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.2em
+
+	\item
+	\headerrow
+		{\textbf{Deloitte}}
+		{\textbf{Hyderabad, India}}
+	\\
+	\headerrow
+		{\emph{Solution Advisor}}
+		{\emph{2020 -- Present}}
+	\begin{itemize*}
+		\item Working as a Backend Developer in the Blockchain Auditing Tool.
+		\item Developing and maintaining the backend solution in C\# .Net, Nodejs and Python.
+		\item Improved the tool performance by 20\% by refactoring the legacy code.
+        \item Reduced the operational cost and workload by 30\% by automating the maintenance activities using bash and nodejs scripts.  
+        \item Increased the tool reliability and durability by 20\% by using nginx as reverse proxy and load-balancer.
+    \end{itemize*}
+
+\item
+	\headerrow
+		{\textbf{Personal Projects}}
+		{\textbf{Hyderabad, India}}
+	\\
+	\headerrow
+		{\emph{Software Developer, Technology Writer}}
+		{\emph{2018 -- Present}}
+	\begin{itemize*}
+	    \item Author of \textbf{\href{https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/}{{Playtime with Hyperledger Composer}}} eBook.
+	    \item Author at \href{https://www.freecodecamp.org/news/author/schadokar/}{freecodecamp}, \href{https://schadokar.dev}{My Blog}, \href{https://medium.com/@schadokar}{Medium} and \href{https://codesource.io/author/shubham/}{Codesource.io}. I write articles and tutorials on Golang, Nodejs, and Blockchain.
+	    \item Actively engaged in the architecture and development of a marketing solution for bloggers.
+        \item Microservice Projects: Blockchain Dapp, Coffee-Hai(supplychain management).
+    
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{MSR Cosmos}}
+		{\textbf{Hyderabad, India}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{2018 -- 2020}}
+	\begin{itemize*}
+		\item \textbf{Backend Developer in the Blockchain as a Service Project}
+		and responsible for designing, developing and maintaining the backend implementation in golang, nodejs, and hyperledger fabric.
+		\item  Facilitated in acquiring multiple venture capitals for MSR Cosmos by developing SupplyChain, Insurance, Retirement Plan, Ticket Counterfeit, and Document Stamping on the Fabric and the Ethereum Blockchain.
+        \item Improved platform efficiency by half using Golang in the backend.
+    	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Infosys}}
+		{\textbf{Bangalore, India}}
+	\\
+	\headerrow
+		{\emph{System Engineer \& Blockchain Developer}}
+		{\emph{2016 -- 2018}}
+	\begin{itemize*}
+		
+		\item Conducted research on various blockchains and developed PoCs of the client’s business model on the Ethereum and Hyperledger Fabric blockchains to encourage acceptance of the blockchain technology across the different business sectors.
+		\item Successfully migrated the SharePoint 2010 on-premise sites to the SharePoint 2013 Azure Cloud.
+	\end{itemize*}
+
+	
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{Jabalpur Engineering College}}
+		{\textbf{Jabalpur, India}}
+	\\
+	\headerrow
+		{\emph{Bachelor of Engineering in Electronics and Tele-Communication}}
+		{\emph{2012 -- 2016}}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Certifications}
+
+    \begin{itemize}
+    \parskip=0.1em
+        \item 
+        \headerrow
+	    {\textbf{Google Cloud Platform Fundamentals: Core Infrastructure}}
+	    {\textbf{Google}}
+    \\
+    \headerrow
+	   {\emph {\href {http://coursera.org/verify/Y42SC7GFA53C} {{www.youracclaim.com/badges/75d03998-c9da-44e6-b266-526362998b2a}}}}    
+     
+    \item 
+    \headerrow
+	    {\textbf{IBM Blockchain Foundation Developer}}
+	    {\textbf{IBM}}
+    \\
+    \headerrow
+	   {\emph {\href {https://www.youracclaim.com/badges/75d03998-c9da-44e6-b266-526362998b2a} {{www.youracclaim.com/badges/75d03998-c9da-44e6-b266-526362998b2a}}}}
+     
+     \item 
+	\headerrow
+	    {\textbf{Corda Certified Developer}}
+	    {\textbf{R3}}
+	\\
+    \headerrow
+    {\emph{\href{https://www.youracclaim.com/badges/6960af38-e05c-4b22-bf3d-1e13314997f8}{{www.youracclaim.com/badges/6960af38-e05c-4b22-bf3d-1e13314997f8}}}}
+     \item 
+\headerrow
+	    {\textbf{Exam 532: Developing Microsoft Azure Solutions}}
+	    {\textbf{Microsoft}}
+	\\
+    \headerrow
+    {\emph{\href{https://www.youracclaim.com/badges/9016ac9c-1803-48a2-ab12-cfc92e5b1f5c}{{www.youracclaim.com/badges/9016ac9c-1803-48a2-ab12-cfc92e5b1f5c}}}}
+            
+     \item 
+	\headerrow
+	    {\textbf{Go: The Complete Developer's Guide (Golang)}}
+	    {\textbf{Udemy}}
+	\\
+    \headerrow
+    {\emph{\href{https://www.udemy.com/certificate/UC-3R3LZ3BP/}{{www.udemy.com/certificate/UC-3R3LZ3BP}}}}
+    
+    \end{itemize}
+\end{document}
