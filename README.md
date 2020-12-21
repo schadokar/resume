@@ -7,6 +7,6 @@ This is a modified template of [toofishes.net](https://www.toofishes.net/blog/la
 ###### ScreenShot
 
 <kbd>
-    <img src="resume-page-1.png"/> 
-    <img src="resume-page-2.png"/> 
+    <img src="ShubhamChadokar_Resume-1.png"/> 
+    <img src="ShubhamChadokar_Resume-2.png"/> 
 </kbd>
