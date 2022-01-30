@@ -7,6 +7,5 @@ This is a modified template of [toofishes.net](https://www.toofishes.net/blog/la
 > Use pdf to png converter to show resume in the readme
 
 <kbd>
-    <img src="ShubhamChadokar_Resume-1.png"/> 
-    <img src="ShubhamChadokar_Resume-2.png"/> 
+    <img src="ShubhamChadokar_Resume-1.jpg"/> 
 </kbd>
