@@ -1,16 +1,13 @@
 % resume.tex
 % vim:set ft=tex spell:
 
-\documentclass[11pt,a4paper,hidelinks]{article}
-\usepackage[a4paper,margin=0.65in]{geometry}
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
 \usepackage{mdwlist}
-\usepackage{fontawesome}
+\usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
-\usepackage{xcolor}
-
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
@@ -18,30 +15,25 @@
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
-  {\setlength{\leftmargin}{#1}}%
-  \item[]%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
 }
 {\end{list}}
 
 % opposite of above; bump a section back toward the left margin
 \newenvironment{unindentsection}[1]%
 {\begin{list}{}%
-  {\setlength{\leftmargin}{-0.5#1}}%
-  \item[]%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
 }
 {\end{list}}
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  #1 &
-  #2 \\
+	#1 &
+	#2 \\
 \end{tabular*}}
-
-\definecolor{IFBlue}{HTML}{0F6688}
-\definecolor{IFDarkBlue}{HTML}{00425C}
-\definecolor{IFMediumBlue}{HTML}{17739A}
-\definecolor{IFLightBlue}{HTML}{228FBD}
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -51,123 +43,138 @@
 \begin{document}
 
 \begin{center}
-  {\Huge \textbf{Shubham Kumar Chadokar}}
+{\LARGE \textbf{John Q. Example}}
 
-  \textbf{\Large\ \textbf{Software Engineer Specialist}} \\
-
-  \ \ shubhamchadokar04@gmail.com
-  \\
-
-  {{\href {https://schadokar.dev}{{schadokar.dev}}}} \ \ \textbullet
- \ \  {{\href{https://github.com/schadokar}{{github.com/schadokar}}}} \ \ \textbullet
-  \ \ {{\href {https://www.linkedin.com/in/schadokar/}{{linkedin.com/in/schadokar}}}}
-
+151 E Wacker Drive\ \ \textbullet
+\ \ Suite\ 1001\ \ \textbullet
+\ \ Chicago, IL 60606
+\\
+(312) 555-1212\ \ \textbullet
+\ \ test@example.com
 \end{center}
 
 \hrule
 \vspace{-0.4em}
-
-\vspace{0.4em}
-
-
-{\color{IFLightBlue} \hrule}
-\vspace{-0.4em}
-{\color{IFMediumBlue}\section*{Experience}}
+\subsection*{Experience}
 
 \begin{itemize}
-  \parskip=0.2em
+	\parskip=0.1em
 
-  \item
-        \headerrow
-        {\textbf{Kaleyra}}
-        {\textbf{Bangalore, India}}
-        
-        \headerrow
-        {\emph{Software Engineer Specialist}}
-        {\emph{Apr 2021 -- Present}}
-        \begin{itemize*}
-          \item Designed and Developed the billing service of CPaaS.
-          \item Reduced the resources by 1/10th using the batching process.
-          \item Developed internal SDKs to improve the platform efficiency and to make consistent code across the company.
-        \end{itemize*}
+	\item
+	\headerrow
+		{\textbf{Example Company One, LLC.}}
+		{\textbf{Chicago, IL}}
+	\\
+	\headerrow
+		{\emph{Software Developer \& Project Manager}}
+		{\emph{2004 -- 2010}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+		erat volutpat.
+		\item Duis splople autem vel eum iriure dolor in hendrerit in vulputate
+		velit esse molestie consequat, vel illum dolore eu feugiat nulla
+		facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+		praesent luptatum zzril delenit augue duis dolore te feugait nulla
+		facilisi.
+		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
+		imperdiet doming id quod mazim placerat facer possim assum. Typi non
+		habent claritatem insitam; est usus legentis in iis qui facit eorum
+		claritatem.
+		\item Investigationes demonstraverunt lectores legere me lius
+		quod ii legunt saepius. Claritas est etiam processus dynamicus, qui
+		sequitur mutationem consuetudium lectorum.
+		\item Mirum est notare quam littera gothica, quam nunc putamus parum
+		claram, anteposuerit litterarum formas humanitatis per seacula quarta
+		decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum
+		clari, fiant sollemnes in futurum.
+	\end{itemize*}
 
-  \item
-        \headerrow
-        {\textbf{Deloitte}}
-        {\textbf{Hyderabad, India}}
+	\item
+	\headerrow
+		{\textbf{Arch Linux}}
+		{\textbf{www.archlinux.org}}
+	\\
+	\headerrow
+		{\emph{Software Developer \& Contributing Community Member}}
+		{\emph{2006 -- Present}}
+	\begin{itemize*}
+		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
+		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		\item Duis splople autem vel eum iriure dolor in hendrerit in vulputate
+		velit esse molestie consequat, vel illum dolore eu feugiat nulla
+		facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+		praesent luptatum zzril delenit augue duis dolore te feugait nulla
+		facilisi.
+		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
+		imperdiet doming id quod mazim placerat facer possim assum. Typi non
+		habent claritatem insitam; est usus legentis in iis qui facit eorum
+		claritatem.
+		\item Mirum est notare quam littera gothica, quam nunc putamus parum
+		claram, anteposuerit litterarum formas humanitatis per seacula quarta
+		decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum
+		clari, fiant sollemnes in futurum.
+	\end{itemize*}
 
-        \headerrow
-        {\emph{Solution Advisor}}
-        {\emph{Mar 2020 -- Apr 2021}}
-        \begin{itemize*}
-          \item Developed and Maintained the Crypto Currency Auditing Tool.
-          \item Automated the blockchain custody verification and report generation process.
-          \item Improved the tool performance by 20\% by refactoring the legacy code.
-        \end{itemize*}
+	\item
+	\headerrow
+		{\textbf{Example Company Two, Inc.}}
+		{\textbf{Chicago, IL}}
+	\\
+	\headerrow
+		{\emph{Software Consultant, Summer Intern}}
+		{\emph{1999 -- 2004}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+		erat volutpat.
+		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
+		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
+		imperdiet doming id quod mazim placerat facer possim assum. Typi non
+		habent claritatem insitam; est usus legentis in iis qui facit eorum
+		claritatem.
+	\end{itemize*}
 
-  \item
-        \headerrow
-        {\textbf{MSR Cosmos}}
-        {\textbf{Hyderabad, India}}
-        \headerrow
-        {\emph{Software Engineer}}
-        {\emph{Aug 2018 -- Mar 2020}}
-        \begin{itemize*}
-          \item Developed the Interface of Blockchain as a Service Platform to communicate with different blockchain networks.
-          \item Implemented blockchain solutions like Supplychain, Insurance, Document Stamping on Hyperledger Fabric and Ethereum Blockchain network.
-        \end{itemize*}
-
-  \item
-        \headerrow
-        {\textbf{Infosys}}
-        {\textbf{Bangalore, India}}
-        \\
-        \headerrow
-        {\emph{System Engineer \& Blockchain Developer}}
-        {\emph{Jun 2016 -- Aug 2018}}
-        \begin{itemize*}
-
-          \item Conducted research on various blockchains and developed blockchain solution on the Ethereum and Hyperledger Fabric.
-          \item Successfully migrated the SharePoint 2010 on-premise sites to the SharePoint 2013 Azure Cloud.
-        \end{itemize*}
 \end{itemize}
 
 
-{\color{IFLightBlue} \hrule}
+\hrule
 \vspace{-0.4em}
-{\color{IFMediumBlue}\section*{Side Projects}}
-\begin{itemize}
-  \parskip=0.1em
-    \item Author of \textbf{\href{https://schadokar.dev/ebooks/playtime-with-hyperledger-composer/}{{Playtime with Hyperledger Composer}}} eBook.
-    \item Write articles on my blog and different publications \href{https://www.freecodecamp.org/news/author/schadokar/}{freecodecamp}, \href{https://medium.com/@schadokar}{Medium}.
-    \item Created projects on order-delivery system, blockchain voting system, twitter engagement tool.
-\end{itemize}
-
-{\color{IFLightBlue} \hrule}
-\vspace{-0.4em}
-{\color{IFMediumBlue}\section*{Technical Skills}}
-  \begin{itemize}
-    \parskip=0.1em
-    \item \textbf{Languages:} Golang, JavaScript
-    \item \textbf{Frameworks:} Nodejs, Reactjs
-    \item \textbf{Other:} Docker, Blockchain, AWS, MongoDB, MySQL
-  \end{itemize}
-
-{\color{IFLightBlue} \hrule}
-\vspace{-0.4em}
-{\color{IFMediumBlue}\section*{Education}}
+\subsection*{Education}
 
 \begin{itemize}
-  \parskip=0.1em
+	\parskip=0.1em
 
-  \item
-        \headerrow
-        {\textbf{Jabalpur Engineering College}}
-        {\textbf{Jabalpur, India}}
-    
-        \headerrow
-        {\emph{Bachelor of Engineering in Electronics and Tele-Communication}}
-        {\emph{2012 -- 2016}}
+	\item 
+	\headerrow
+		{\textbf{Somewhere State University}}
+		{\textbf{Somewhere, SM}}
+	\\
+	\headerrow
+		{\emph{College of Engineering, B.S. Computer Science}}
+		{\emph{1995 -- 1999}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		\item Mirum est notare quam littera gothica, quam nunc putamus parum
+		claram.
+	\end{itemize*}
+
 \end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	C, \CPP, Java, JavaScript, \LaTeX, Perl, Python, shell script, SQL
+	\item[Open Source Contributions:]
+	Project A, Project B, Project C
+\end{description*}
+\end{indentsection}
 
 \end{document}
