@@ -122,6 +122,49 @@ Ensure the corresponding font package is installed in your LaTeX distribution.
 
 ---
 
+## Using Claude Code to Write & Improve the Resume
+
+This repo includes a `CLAUDE.md` that configures Claude Code as a resume-writing assistant — it knows the LaTeX structure, editing rules, and your career context.
+
+### Getting Started
+
+Open Claude Code in this repo and describe what you want:
+
+```
+"Add a bullet for the Infoblox role: I reduced alert noise in Grafana by 80% by rebuilding the dashboard"
+"Improve the billing platform bullets — make them punchier"
+"Tailor my resume for this job description: <paste JD>"
+```
+
+Claude will follow the guidelines in `CLAUDE.md`: metrics-first bullets, one-page constraint, ATS-safe formatting.
+
+### Switching Target Roles
+
+`CLAUDE.md` is tuned for a **Backend Platform Engineer** by default. To target a different role, use the prompts in [`prompts.md`](./prompts.md).
+
+Available role prompts:
+
+| Role | How to activate |
+|------|----------------|
+| Backend / Platform Engineer | Default — no change needed |
+| Staff / Principal Engineer | Copy prompt from `prompts.md` → paste into Claude Code |
+| Engineering Manager | Copy prompt from `prompts.md` → paste into Claude Code |
+| Product Manager | Copy prompt from `prompts.md` → paste into Claude Code |
+| Data Engineer / ML Engineer | Copy prompt from `prompts.md` → paste into Claude Code |
+| Solutions Architect / Dev Advocate | Copy prompt from `prompts.md` → paste into Claude Code |
+| Blockchain / Web3 Engineer | Copy prompt from `prompts.md` → paste into Claude Code |
+| Custom role | Use the template at the bottom of `prompts.md` |
+
+Each prompt updates the **Owner Context** and **coaching behavior** in `CLAUDE.md` so Claude knows what signals matter for that role.
+
+### After Switching Roles
+
+1. Run `latexmk -pdf main.tex` and verify the PDF is still one page
+2. Check that the Skills section reflects the target role's stack
+3. Revert `CLAUDE.md` to the backend default when done: paste the first prompt from `prompts.md`
+
+---
+
 ## Troubleshooting
 
 | Problem | Fix |
