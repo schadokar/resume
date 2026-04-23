@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubham Chadokar
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode\pdfgentounicode=1\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shubham Chadokar} \\ \vspace{8pt}
+    \small 8649904058 $|$ \href{mailto:shubhamchadokar04@gmail.com}{\underline{shubhamchadokar04@gmail.com}} $|$
+    \href{https://linkedin.com/in/schadokar}{\underline{linkedin.com/in/schadokar}} $|$
+    \href{https://github.com/schadokar}{\underline{github.com/schadokar}} $|$
+    \href{https://schadokar.dev}{\underline{schadokar.dev}}
+\end{center}
+
+%-----------SUMMARY-----------
+\vspace{-20pt}
+\section{Summary}
+\small{Backend platform engineer with 10 years of experience building systems at scale. Architected a CPaaS billing platform handling $\sim$1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components ($-75\%$ complexity, 5--6X throughput headroom); delivered a zero-downtime platform-wide SSO with zero production disruption. Core stack: Go, Kafka, Kubernetes, PostgreSQL; track record across architecture, delivery, on-call, and mentorship.}
+\vspace{-12pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Infoblox}{Sept. 2024 -- Present}
+      {Senior Software Engineer \textemdash{} Data Engineering}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Defined and drove adoption of a new Cloud Data Connector architecture, consolidating 20 microservices into 5 modular components ($-75\%$ complexity); benchmarks validated 5--6X throughput headroom, establishing the design as the platform's scalability foundation for the next growth phase.}
+        \resumeItem{Identified an emerging Kafka topic-explosion risk before it manifested \textemdash{} led the technical design and cross-team alignment on a per-customer keyed partition topology, cutting projected topic count 100X (1M $\rightarrow$ 10K); enforced broker-level tenant isolation with a zero-downtime migration, protecting scalability headroom for 1K$\rightarrow$10K customer growth.}
+        \resumeItem{Improved end-to-end pipeline latency and throughput 60--70\% by profiling Go services, refactoring critical code paths, and eliminating redundant processing layers.}
+        \resumeItem{Rebuilt Grafana observability and alerting infrastructure from scratch across 5 services \textemdash{} reduced MTTD on customer-impacting incidents from $\sim$4 hrs to 20 min; established SLO dashboards and on-call runbooks adopted as team standard.}
+        \resumeItem{Independently designed and shipped 3 internal LLM agents (PR review, deployment automation, sprint retros), later adopted across the engineering team \textemdash{} reclaimed $\sim$2 hrs/week per engineer in aggregate and eliminated deploy failures from manual misconfiguration entirely (0 incidents in 3 months post-launch).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Kaleyra (Tata Communications)}{Apr. 2021 -- Oct. 2023}
+      {Associate Software Architect \textemdash{} Billing, SSO, Chat Platform}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Designed and delivered the CPaaS billing platform end-to-end \textemdash{} 10K RPS, $\sim$1B transactions/day \textemdash{} leading 3 engineers across architecture, breakdown, reviews, and release.}
+        \resumeItem{Cut billing latency by 60\% and infrastructure cost by 30\% by redesigning service architecture and data flows; reduced compute footprint 10X via high-frequency transaction batching.}
+        \resumeItem{Resolved recurring MongoDB file descriptor outages (2--3/month at peak) across 10 services by designing a tier-based collection model \textemdash{} reducing 100K+ collections to a manageable pool, coordinated across 4 teams and validated by MongoDB consultants \textemdash{} directly enabling a new premium revenue tier (faster reports + extended data retention).}
+        \resumeItem{Delivered a zero-disruption rollout of a platform-wide Keycloak SSO gateway affecting every engineer, team, and customer \textemdash{} a zero-downtime system where any failure would cause company-wide outage \textemdash{} zero production incidents during and after launch; architected the integration, defined the cutover sequence, and coordinated delivery across 2 engineers.}
+        \resumeItem{Eliminated a cross-departmental approval bottleneck by designing and implementing a company-level admin SSO \textemdash{} collapsed recursive approval chains spanning 3 departments into a single-step process; led 2 engineers end-to-end.}
+        \resumeItem{Rewrote the WhatsApp Web-style chat platform from scratch in Go and migrated SQL $\rightarrow$ MongoDB, eliminating class-level reliability bugs and removing the relational-schema scaling ceiling.}
+        \resumeItem{Migrated legacy PHP billing service to Go and admin portals to Node.js, cutting tech debt by $70$--$80\%$ and improving load performance by $80$--$90\%$.}
+        \resumeItem{Mentored 3 junior engineers on distributed-systems design \textemdash{} outcomes: 1 promoted to Senior SWE, 1 joined Amazon, 1 admitted to IIT (M.Tech).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Deloitte}{Mar. 2020 -- Apr. 2021}
+      {Solution Advisor \textemdash{} Blockchain \& Digital Assets}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Refactored critical execution paths in a blockchain custody platform for enterprise clients, achieving 20\% throughput gain and eliminating manual audit overhead through automated custody verification; contributed technical risk assessment for Facebook Novi infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {MSR Cosmos}{Aug. 2018 -- Mar. 2020}
+      {Software Engineer \textemdash{} Blockchain}{Hyderabad, India}
+
+    \vspace{4pt}
+    \resumeSubheading
+      {Infosys}{Jun. 2016 -- Aug. 2018}
+      {System Engineer \textemdash{} Blockchain R\&D}{Bangalore, India}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Munshiji} $|$ \href{https://munshiji.xyz}{\underline{munshiji.xyz}}}{}
+          \resumeItemListStart
+            \resumeItem{Open-source, self-hosted personal finance dashboard built for India \textemdash{} first-class support for EPF, NPS, PPF, SSY, and 13+ Indian account types that global tools don't model.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Writing \& Speaking} $|$ \emph{freeCodeCamp, Towards Data Science, DigitalOcean, schadokar.dev}}{}
+          \resumeItemListStart
+            \resumeItem{Author of \emph{Playtime with Hyperledger Composer} (eBook)}
+            \resumeItem{Speaker at London Gophers, Pune Gophers, and DockerCon on Go, distributed systems, and container tooling.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Jabalpur Engineering College}{Jabalpur, MP}
+      {Bachelor of Engineering, Electronics and Telecommunication}{Aug. 2012 -- May 2016}
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, JavaScript, Python, SQL, C\#} \\
+     \textbf{Infra \& Data}{: Kubernetes, Docker, AWS, GCP, Azure, Kafka, PostgreSQL, MongoDB, MySQL, Redis, RabbitMQ} \\
+     \textbf{Frameworks \& Tools}{: gRPC, REST, Node.js, ReactJS, Keycloak, Grafana}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
