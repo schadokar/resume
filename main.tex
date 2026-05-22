@@ -37,13 +37,14 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -53,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \ifdefined\pdfgentounicode\pdfgentounicode=1\fi
@@ -96,7 +97,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,7 +107,7 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Shubham Chadokar} \\ \vspace{8pt}
+    \textbf{\Huge \scshape Shubham Chadokar} \\ \vspace{6pt}
     \small 8649904058 $|$ \href{mailto:shubhamchadokar04@gmail.com}{\underline{shubhamchadokar04@gmail.com}} $|$
     \href{https://linkedin.com/in/schadokar}{\underline{linkedin.com/in/schadokar}} $|$
     \href{https://github.com/schadokar}{\underline{github.com/schadokar}} $|$
@@ -114,58 +115,71 @@
 \end{center}
 
 %-----------SUMMARY-----------
-\vspace{-20pt}
+\vspace{-8pt}
 \section{Summary}
-\small{Backend platform engineer with 10 years of experience building systems at scale. Architected a CPaaS billing platform handling $\sim$1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components ($-75\%$ complexity, 5--6X throughput headroom); delivered a zero-downtime platform-wide SSO with zero production disruption. Core stack: Go, Kafka, Kubernetes, PostgreSQL; track record across architecture, delivery, on-call, and mentorship.}
-\vspace{-12pt}
+\small{Backend platform engineer with 10 years of experience building systems at scale. Architected a CPaaS billing platform handling~1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components; delivered a zero-downtime platform-wide SSO with zero production disruption.}
+\vspace{-4pt}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Core Stack}{: Go, JavaScript, SQL, gRPC, Node.js, ReactJS} \\
+     \textbf{Tools \& Platforms}{: Kubernetes, Docker, AWS, Kafka, PostgreSQL, MongoDB, Redis, RabbitMQ, Grafana}
+    }}
+ \end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Infoblox}{Sept. 2024 -- Present}
-      {Senior Software Engineer \textemdash{} Data Engineering}{Bangalore, India}
+      {Infoblox}{Sept 2024 -- Present}
+      {Senior Software Engineer $|$ Data Engineering}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Defined and drove adoption of a new Cloud Data Connector architecture, consolidating 20 microservices into 5 modular components ($-75\%$ complexity); benchmarks validated 5--6X throughput headroom, establishing the design as the platform's scalability foundation for the next growth phase.}
-        \resumeItem{Identified an emerging Kafka topic-explosion risk before it manifested \textemdash{} led the technical design and cross-team alignment on a per-customer keyed partition topology, cutting projected topic count 100X (1M $\rightarrow$ 10K); enforced broker-level tenant isolation with a zero-downtime migration, protecting scalability headroom for 1K$\rightarrow$10K customer growth.}
-        \resumeItem{Improved end-to-end pipeline latency and throughput 60--70\% by profiling Go services, refactoring critical code paths, and eliminating redundant processing layers.}
-        \resumeItem{Rebuilt Grafana observability and alerting infrastructure from scratch across 5 services \textemdash{} reduced MTTD on customer-impacting incidents from $\sim$4 hrs to 20 min; established SLO dashboards and on-call runbooks adopted as team standard.}
-        \resumeItem{Independently designed and shipped 3 internal LLM agents (PR review, deployment automation, sprint retros), later adopted across the engineering team \textemdash{} reclaimed $\sim$2 hrs/week per engineer in aggregate and eliminated deploy failures from manual misconfiguration entirely (0 incidents in 3 months post-launch).}
+        \resumeItem{Redesigned the Cloud Data Connector platform from 20 microservices into 5 components. Removed duplicate code across repos and fixed package versioning, saving days of work per release.}
+        \resumeItem{Caught a Kafka topic-explosion risk before it shipped. Designed a per-customer keyed partition topology and got cross-team buy-in; projected topic count dropped 100x (1M $\rightarrow$ 10K).}
+        \resumeItem{Rebuilt Grafana observability and alerting from scratch across 5 services. MTTD on customer-impacting incidents went from $\sim$4 hrs to 20 min. SLO dashboards and on-call runbooks became the team standard.}
+        \resumeItem{Built 3 internal LLM agents (PR review, deploy automation, sprint retros). Other teams picked them up. Manual-misconfig deploy failures went to 0 within 3 months.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Kaleyra (Tata Communications)}{Apr. 2021 -- Oct. 2023}
-      {Associate Software Architect \textemdash{} Billing, SSO, Chat Platform}{Bangalore, India}
+      {Kaleyra (Tata Communications)}{Apr 2021 -- Sept 2024}
+      {Associate Software Architect $|$ Billing, SSO, Chat Platform}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Designed and delivered the CPaaS billing platform end-to-end \textemdash{} 10K RPS, $\sim$1B transactions/day \textemdash{} leading 3 engineers across architecture, breakdown, reviews, and release.}
-        \resumeItem{Cut billing latency by 60\% and infrastructure cost by 30\% by redesigning service architecture and data flows; reduced compute footprint 10X via high-frequency transaction batching.}
-        \resumeItem{Resolved recurring MongoDB file descriptor outages (2--3/month at peak) across 10 services by designing a tier-based collection model \textemdash{} reducing 100K+ collections to a manageable pool, coordinated across 4 teams and validated by MongoDB consultants \textemdash{} directly enabling a new premium revenue tier (faster reports + extended data retention).}
-        \resumeItem{Delivered a zero-disruption rollout of a platform-wide Keycloak SSO gateway affecting every engineer, team, and customer \textemdash{} a zero-downtime system where any failure would cause company-wide outage \textemdash{} zero production incidents during and after launch; architected the integration, defined the cutover sequence, and coordinated delivery across 2 engineers.}
-        \resumeItem{Eliminated a cross-departmental approval bottleneck by designing and implementing a company-level admin SSO \textemdash{} collapsed recursive approval chains spanning 3 departments into a single-step process; led 2 engineers end-to-end.}
-        \resumeItem{Rewrote the WhatsApp Web-style chat platform from scratch in Go and migrated SQL $\rightarrow$ MongoDB, eliminating class-level reliability bugs and removing the relational-schema scaling ceiling.}
-        \resumeItem{Migrated legacy PHP billing service to Go and admin portals to Node.js, cutting tech debt by $70$--$80\%$ and improving load performance by $80$--$90\%$.}
-        \resumeItem{Mentored 3 junior engineers on distributed-systems design \textemdash{} outcomes: 1 promoted to Senior SWE, 1 joined Amazon, 1 admitted to IIT (M.Tech).}
+        \resumeItem{Designed and delivered the CPaaS billing platform end-to-end at 10K RPS and $\sim$1B transactions/day; led a team of 3 engineers across architecture, task breakdown, reviews, and release.}
+        \resumeItem{Cut billing latency 60\% and infra cost 30\% by redesigning the service architecture and data flows. Compute footprint dropped 10x after moving to gRPC and batching high-frequency transactions.}
+        \resumeItem{Fixed recurring MongoDB file-descriptor outages (2--3/month at peak) across 10 services by moving 100K+ collections into a tier-based pool. Coordinated with 4 teams and validated the design with MongoDB consultants. The new layout opened up a premium tier: faster reports, longer retention.}
+        \resumeItem{Replaced a 3-department recursive approval chain with a single-step company admin SSO.}
+        \resumeItem{Rewrote the WhatsApp Web-style chat platform from scratch in Go and moved storage from SQL to MongoDB.}
+        \resumeItem{Migrated the legacy PHP billing service to Go and the admin portals to Node.js. Page load times improved 80--90\%.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Deloitte}{Mar. 2020 -- Apr. 2021}
-      {Solution Advisor \textemdash{} Blockchain \& Digital Assets}{Hyderabad, India}
+      {Deloitte}{Mar 2020 -- Apr 2021}
+      {Solution Advisor $|$ Blockchain \& Digital Assets}{Hyderabad, India}
       \resumeItemListStart
-        \resumeItem{Refactored critical execution paths in a blockchain custody platform for enterprise clients, achieving 20\% throughput gain and eliminating manual audit overhead through automated custody verification; contributed technical risk assessment for Facebook Novi infrastructure.}
+        \resumeItem{Built a multi-chain blockchain auditing tool covering 14 cryptocurrencies (Bitcoin, Ethereum, Ripple, Polkadot, and others), plus a Rosetta API integration for Celo.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {MSR Cosmos}{Aug. 2018 -- Mar. 2020}
-      {Software Engineer \textemdash{} Blockchain}{Hyderabad, India}
+      {MSR Cosmos}{Aug 2018 -- Mar 2020}
+      {Software Engineer $|$ Blockchain}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Built the interface layer for the Blockchain-as-a-Service platform, wiring the infrastructure and frontend together so the platform could talk to the Blockchain networks (Ethereum and Hyperledger Fabric).}
+      \resumeItemListEnd
 
-    \vspace{4pt}
     \resumeSubheading
-      {Infosys}{Jun. 2016 -- Aug. 2018}
-      {System Engineer \textemdash{} Blockchain R\&D}{Bangalore, India}
+      {Infosys}{Jun 2016 -- Aug 2018}
+      {System Engineer $|$ Blockchain R\&D}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Built blockchain PoCs on Ethereum and Hyperledger Fabric; migrated SharePoint 2010 to 2013 on Azure.}
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+\newpage
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -173,7 +187,7 @@
       \resumeProjectHeading
           {\textbf{Munshiji} $|$ \href{https://munshiji.xyz}{\underline{munshiji.xyz}}}{}
           \resumeItemListStart
-            \resumeItem{Open-source, self-hosted personal finance dashboard built for India \textemdash{} first-class support for EPF, NPS, PPF, SSY, and 13+ Indian account types that global tools don't model.}
+            \resumeItem{Open-source, self-hosted personal finance dashboard built for India. First-class support for EPF, NPS, PPF, SSY, and 13+ Indian account types that global tools don't model.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Writing \& Speaking} $|$ \emph{freeCodeCamp, Towards Data Science, DigitalOcean, schadokar.dev}}{}
@@ -191,17 +205,6 @@
       {Jabalpur Engineering College}{Jabalpur, MP}
       {Bachelor of Engineering, Electronics and Telecommunication}{Aug. 2012 -- May 2016}
   \resumeSubHeadingListEnd
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Go, JavaScript, Python, SQL, C\#} \\
-     \textbf{Infra \& Data}{: Kubernetes, Docker, AWS, GCP, Azure, Kafka, PostgreSQL, MongoDB, MySQL, Redis, RabbitMQ} \\
-     \textbf{Frameworks \& Tools}{: gRPC, REST, Node.js, ReactJS, Keycloak, Grafana}
-    }}
- \end{itemize}
 
 
 %-------------------------------------------
