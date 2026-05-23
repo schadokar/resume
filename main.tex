@@ -117,7 +117,7 @@
 %-----------SUMMARY-----------
 \vspace{-8pt}
 \section{Summary}
-\small{Backend platform engineer with 10 years of experience building systems at scale. Architected a CPaaS billing platform handling~1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components; delivered a zero-downtime platform-wide SSO with zero production disruption.}
+\small{Backend platform engineer with 10 years of experience building cloud-native microservices at scale. Architected a CPaaS billing platform handling~1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components; delivered a zero-downtime platform-wide SSO with zero production disruption. Strong in Go, event-driven architecture, and observability; equally comfortable owning a system end-to-end and aligning cross-functional teams and stakeholders around a design.}
 \vspace{-4pt}
 
 %
@@ -135,13 +135,13 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Infoblox}{Sept 2024 -- Present}
+      {Infoblox}{Sept 2024 -- May 2026}
       {Senior Software Engineer $|$ Data Engineering}{Bangalore, India}
       \resumeItemListStart
         \resumeItem{Redesigned the Cloud Data Connector platform from 20 microservices into 5 components. Removed duplicate code across repos and fixed package versioning, saving days of work per release.}
         \resumeItem{Caught a Kafka topic-explosion risk before it shipped. Designed a per-customer keyed partition topology and got cross-team buy-in; projected topic count dropped 100x (1M $\rightarrow$ 10K).}
         \resumeItem{Rebuilt Grafana observability and alerting from scratch across 5 services. MTTD on customer-impacting incidents went from $\sim$4 hrs to 20 min. SLO dashboards and on-call runbooks became the team standard.}
-        \resumeItem{Built 3 internal LLM agents (PR review, deploy automation, sprint retros). Other teams picked them up. Manual-misconfig deploy failures went to 0 within 3 months.}
+        \resumeItem{Built 3 internal LLM agents covering PR review, deploy automation, and Agile sprint retros. Other teams picked them up. Manual-misconfig deploy failures went to 0 within 3 months.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -151,35 +151,22 @@
         \resumeItem{Designed and delivered the CPaaS billing platform end-to-end at 10K RPS and $\sim$1B transactions/day; led a team of 3 engineers across architecture, task breakdown, reviews, and release.}
         \resumeItem{Cut billing latency 60\% and infra cost 30\% by redesigning the service architecture and data flows. Compute footprint dropped 10x after moving to gRPC and batching high-frequency transactions.}
         \resumeItem{Fixed recurring MongoDB file-descriptor outages (2--3/month at peak) across 10 services by moving 100K+ collections into a tier-based pool. Coordinated with 4 teams and validated the design with MongoDB consultants. The new layout opened up a premium tier: faster reports, longer retention.}
-        \resumeItem{Replaced a 3-department recursive approval chain with a single-step company admin SSO.}
+        \resumeItem{Replaced a 3-department recursive approval chain with a single-step company admin SSO using Keycloak.}
         \resumeItem{Rewrote the WhatsApp Web-style chat platform from scratch in Go and moved storage from SQL to MongoDB.}
         \resumeItem{Migrated the legacy PHP billing service to Go and the admin portals to Node.js. Page load times improved 80--90\%.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Deloitte}{Mar 2020 -- Apr 2021}
-      {Solution Advisor $|$ Blockchain \& Digital Assets}{Hyderabad, India}
+      {Early Career -- Infosys, MSR Cosmos, Deloitte}{Jun 2016 -- Apr 2021}
+      {Software Engineer $|$ Distributed Systems}{India}
       \resumeItemListStart
-        \resumeItem{Built a multi-chain blockchain auditing tool covering 14 cryptocurrencies (Bitcoin, Ethereum, Ripple, Polkadot, and others), plus a Rosetta API integration for Celo.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {MSR Cosmos}{Aug 2018 -- Mar 2020}
-      {Software Engineer $|$ Blockchain}{Hyderabad, India}
-      \resumeItemListStart
-        \resumeItem{Built the interface layer for the Blockchain-as-a-Service platform, wiring the infrastructure and frontend together so the platform could talk to the Blockchain networks (Ethereum and Hyperledger Fabric).}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Infosys}{Jun 2016 -- Aug 2018}
-      {System Engineer $|$ Blockchain R\&D}{Bangalore, India}
-      \resumeItemListStart
-        \resumeItem{Built blockchain PoCs on Ethereum and Hyperledger Fabric; migrated SharePoint 2010 to 2013 on Azure.}
+        \resumeItem{Built the interface layer for a BaaS platform on AWS -- unified Node.js API over Ethereum and Hyperledger Fabric, abstracting divergent network protocols with automated deployment pipelines.}
+        \resumeItem{Built a multi-network transaction aggregation service normalizing data across 14 independent blockchain APIs (Deloitte).}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-\newpage
+% \newpage
 
 %-----------PROJECTS-----------
 \section{Projects}
