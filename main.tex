@@ -18,7 +18,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-
+\usepackage{fontspec}
+\setmainfont{Arial}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -55,7 +56,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \ifdefined\pdfgentounicode\pdfgentounicode=1\fi
@@ -70,33 +71,33 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 %-------------------------------------------
@@ -117,15 +118,15 @@
 %-----------SUMMARY-----------
 \vspace{-8pt}
 \section{Summary}
-\small{Backend platform engineer with 10 years of experience building cloud-native microservices at scale. Architected a CPaaS billing platform handling~1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components; delivered a zero-downtime platform-wide SSO with zero production disruption. Strong in Go, event-driven architecture, and observability; equally comfortable owning a system end-to-end and aligning cross-functional teams and stakeholders around a design.}
+\small{Backend platform engineer with 10 years of experience building cloud-native microservices at scale. Architected a CPaaS billing platform handling~1B txns/day at 10K RPS; consolidated a 20-service data pipeline into 5 components; delivered a zero-downtime platform-wide SSO with zero production disruption. Strong in Go, Cloud-Native Architecture, event-driven architecture, and observability, with technical leadership, mentoring, and hands-on coding experience aligning cross-functional teams and stakeholders around system design and high-quality coding.}
 \vspace{-4pt}
 
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-     \textbf{Core Stack}{: Go, JavaScript, SQL, gRPC, Node.js, ReactJS} \\
+     \textbf{Core Stack}{: Golang, JavaScript, SQL, gRPC, Node.js, ReactJS} \\
      \textbf{Tools \& Platforms}{: Kubernetes, Docker, AWS, Kafka, PostgreSQL, MongoDB, Redis, RabbitMQ, Grafana}
     }}
  \end{itemize}
@@ -133,7 +134,6 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Infoblox}{Sept 2024 -- May 2026}
       {Senior Software Engineer $|$ Data Engineering}{Bangalore, India}
@@ -146,7 +146,7 @@
 
     \resumeSubheading
       {Kaleyra (Tata Communications)}{Apr 2021 -- Sept 2024}
-      {Associate Software Architect $|$ Billing, SSO, Chat Platform}{Bangalore, India}
+      {Lead Software Engineer $|$ Billing, SSO, Chat Platform}{Bangalore, India}
       \resumeItemListStart
         \resumeItem{Designed and delivered the CPaaS billing platform end-to-end at 10K RPS and $\sim$1B transactions/day; led a team of 3 engineers across architecture, task breakdown, reviews, and release.}
         \resumeItem{Cut billing latency 60\% and infra cost 30\% by redesigning the service architecture and data flows. Compute footprint dropped 10x after moving to gRPC and batching high-frequency transactions.}
@@ -166,9 +166,8 @@
 
   \resumeSubHeadingListEnd
 
-% \newpage
-
 %-----------PROJECTS-----------
+\vspace{-20pt}
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
@@ -176,6 +175,7 @@
           \resumeItemListStart
             \resumeItem{Open-source, self-hosted personal finance dashboard built for India. First-class support for EPF, NPS, PPF, SSY, and 13+ Indian account types that global tools don't model.}
           \resumeItemListEnd
+      % \vspace{-4pt}
       \resumeProjectHeading
           {\textbf{Writing \& Speaking} $|$ \emph{freeCodeCamp, Towards Data Science, DigitalOcean, schadokar.dev}}{}
           \resumeItemListStart
@@ -184,7 +184,7 @@
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
+\vspace{-7pt}
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -192,7 +192,6 @@
       {Jabalpur Engineering College}{Jabalpur, MP}
       {Bachelor of Engineering, Electronics and Telecommunication}{Aug. 2012 -- May 2016}
   \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 \end{document}

@@ -138,6 +138,44 @@ Open Claude Code in this repo and describe what you want:
 
 Claude will follow the guidelines in `CLAUDE.md`: metrics-first bullets, one-page constraint, ATS-safe formatting.
 
+### Resume Rewrite Skill
+
+Use the `/resume-rewrite` skill when your bullets or summary sound AI-polished or generic. It:
+
+- Strips buzzwords and filler phrases ("leveraged", "spearheaded", "passionate about")
+- Varies sentence rhythm so consecutive bullets don't read as templated
+- Preserves every fact you provided — no invented numbers or inflated claims
+- Flags missing metrics with `[NUMBER]` placeholders instead of guessing
+
+**How to invoke:**
+
+```
+/resume-rewrite
+```
+
+Then paste the bullets or summary you want rewritten. The skill works in two steps:
+
+1. **Propose** — Claude lists the planned changes (buzzwords removed, verb swaps, rhythm fixes, metric placeholders) and asks for approval
+2. **Apply** — After you confirm, Claude outputs the fully rewritten text
+
+Reply `yes` to apply, or tell Claude what to adjust before it rewrites anything.
+
+**Turning it off:**
+
+If you just need to add bullets, fix LaTeX, or make structural edits without the human-voice rewriting rules, turn it off:
+
+```
+/resume-rewrite off
+```
+
+Claude will confirm it's disabled and switch back to plain resume editing for the rest of the session. To re-enable:
+
+```
+/resume-rewrite on
+```
+
+---
+
 ### Switching Target Roles
 
 `CLAUDE.md` is tuned for a **Backend Platform Engineer** by default. To target a different role, use the prompts in [`prompts.md`](./prompts.md).
