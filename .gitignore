@@ -1,3 +1,5 @@
 main.*
 !main.pdf
 !main.tex
+.local
+shubham-*
